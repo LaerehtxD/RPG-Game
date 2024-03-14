@@ -116,10 +116,49 @@ class Enemy:Character
         health += rand.Next(10,30);
     }
 
-
 }
 class Enemy1:Enemy{
     public Enemy1(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
+    Random rand = new Random();
+    public void Bonk(Mc mc)
+    {
+        mc.health -= attackPower * 3;
+    }
+    public void Scream(Mc mc)
+    {
+        mc.health -= rand.Next(10,20);
+    }
+
+
+    public void enemyFight(int randomSkill, Mc mC)
+    {
+
+        if (randomSkill == 1)
+        {
+            Charge(mC);
+            Console.WriteLine("Enemy blah blah blah");
+
+        }
+        if (randomSkill == 2)
+        {
+            Heal();
+            Console.WriteLine("Enemy healed!");
+
+        }
+
+        if (randomSkill == 3)
+        {
+            Bonk(mC);
+            Console.WriteLine("The enemy bonked you!");
+
+        }
+        if (randomSkill == 4)
+        {
+            Scream(mC);
+            Console.WriteLine("The enemy screamed at you!");
+
+        }
+    }
 
 
 }

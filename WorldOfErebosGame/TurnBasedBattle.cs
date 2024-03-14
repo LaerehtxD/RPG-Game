@@ -1,5 +1,6 @@
 class TurnBasedBattle
 {
+    
     public static void GameOver(Mc mC) 
     {
         if (mC.health <= 0)
@@ -10,13 +11,22 @@ class TurnBasedBattle
         }
     }
 
-    public static void EnemyFight(Mc mC , Enemy enemy)
+    public static void EnemyFight(Mc mC , Enemy1 enemy)
     {
-        bool isAlive= true;
-        while (isAlive)
+        GameManager game = new GameManager();
+
+
+        while (enemy.health > 0 || mC.health > 0)
         {
+            mC.Fight(game.SkillDecision(), enemy);
             
+            if (enemy.health > 0)
+                {
+                    enemy.enemyFight(enemy.RandomEnemyAttack() , mC);
+                    GameOver(mC);
+                }
         }
+        Console.WriteLine("ya killed the enemy" );
 
     }
 
