@@ -35,7 +35,7 @@ class Mc:Character
         enemy.health-=attackPower;
     }
 
-    public void heal()
+    public void SelfHeal()
     {
         health *= healValue;
         if (health > overHeal)
@@ -61,6 +61,39 @@ class Mc:Character
         health -= 10;
         enemy.health -= attackPower* rand.Next(10,15);
         
+    }
+    public void Fight(int skill , Enemy enemy)
+    {
+        if (skill == 1)
+        {
+            BasicAttack(enemy);
+            Console.WriteLine("You hit the enemy!");
+        }
+
+        if (skill == 2)
+        {
+            Console.WriteLine("You recovered your health, health added: " , healValue * health);
+            SelfHeal();
+        }
+
+        if (skill == 3)
+        {
+            SwordDash(enemy);
+            Console.WriteLine("You Sword Dashed to the enemy!");
+        }
+
+        if (skill == 4)
+        {
+            SwordDance(enemy);
+            Console.WriteLine("You used Sword Dance against the enemy!");
+        }
+
+        if (skill == 5)
+        {
+            Ultimate(enemy);
+            Console.WriteLine("You used your ultimate!");
+        }
+
     }
 }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game act\\WorldOfErebosGame\\WorldOfErebos.csproj": {}
+    "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game repo\\RPG-Game\\WorldOfErebosGame\\WorldOfErebos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game act\\WorldOfErebosGame\\WorldOfErebos.csproj": {
+    "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game repo\\RPG-Game\\WorldOfErebosGame\\WorldOfErebos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game act\\WorldOfErebosGame\\WorldOfErebos.csproj",
+        "projectUniqueName": "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game repo\\RPG-Game\\WorldOfErebosGame\\WorldOfErebos.csproj",
         "projectName": "WorldOfErebos",
-        "projectPath": "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game act\\WorldOfErebosGame\\WorldOfErebos.csproj",
+        "projectPath": "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game repo\\RPG-Game\\WorldOfErebosGame\\WorldOfErebos.csproj",
         "packagesPath": "C:\\Users\\itorm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game act\\WorldOfErebosGame\\obj\\",
+        "outputPath": "C:\\Users\\itorm\\OneDrive\\Documents\\cc3\\game repo\\RPG-Game\\WorldOfErebosGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
