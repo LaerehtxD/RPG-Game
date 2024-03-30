@@ -12,8 +12,10 @@ class TurnBasedBattle
     }
         public static void ShowStats(Character char1, Character char2)
     {
+        Console.WriteLine("Your current stats: ");
         char1.ShowCurrentStats();
         Console.WriteLine();
+        Console.WriteLine("Enemy stats: ");
         char2.ShowCurrentStats();
         Console.WriteLine();
     }

@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 class Character
@@ -5,21 +6,26 @@ class Character
     
     public string name;
     public float health;
+    public int maxHealth = 100;
     public float attackPower;
-    public float Mana;
+    public float mana;
+    
+    public int level = 1;
+
 
     public Character(string Name, float AttackPower, float Health, float Mana)
     {
         name = Name;
         attackPower = AttackPower;
         health = Health;
+        mana = Mana;
     }
     public void ShowCurrentStats()
     {
-        Console.WriteLine("Your current stats:");
         Console.WriteLine("Name: " + name);
-        Console.WriteLine("Attack Power" + attackPower);
+        Console.WriteLine("Attack Power: " + attackPower);
         Console.WriteLine("Health: " + health);
+        Console.WriteLine("Mana: " + mana);
     }
 
 }
@@ -28,8 +34,32 @@ class Mc:Character
     Random rand = new Random();
     public Mc(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
     public float healValue = 1.2f;
-    public float overHeal = 50f;
+    public float overHeal = 150f;
 
+    public int exp;
+    public void GainExp(int xp)
+    {
+        exp += xp;
+        CheckLevelUp();
+    }
+    public void CheckLevelUp()
+    {
+        if (exp >= 100)
+        {
+            level++;
+            LevelUp();
+        }
+    }
+
+    public void LevelUp()
+    {
+        maxHealth += 50;
+        health = maxHealth;
+        attackPower += 2;
+        mana += 20;
+        overHeal += 150;
+
+    }
     public void BasicAttack(Enemy enemy)
     {
         enemy.health-=attackPower;
@@ -42,18 +72,18 @@ class Mc:Character
         {
             health = overHeal;
         }
-        Mana *= healValue;
+        mana += 5;
     }
     public void SwordDash(Enemy enemy)
     {
         enemy.health -= attackPower+ rand.Next(10,15);
-        Mana -= 10;
+        mana -= 10;
   
     }
     public void SwordDance(Enemy enemy)
     {
         enemy.health -= attackPower+ rand.Next(20,45);
-        Mana -= 20;
+        mana -= 20;
         
     }
     public void Ultimate(Enemy enemy)
@@ -70,28 +100,37 @@ class Mc:Character
             Console.WriteLine("You hit the enemy!");
         }
 
-        if (skill == 2)
+
+        if (skill == 2 && mana > 0)
         {
             Console.WriteLine("You recovered your health, health added: " , healValue * health);
             SelfHeal();
+        }else if(mana <= 0){
+            Console.WriteLine("Not enough mana! You missed your turn.");
         }
 
-        if (skill == 3)
+        if (skill == 3 && mana > 0)
         {
             SwordDash(enemy);
             Console.WriteLine("You Sword Dashed to the enemy!");
+        }else if(mana <= 0){
+            Console.WriteLine("Not enough mana! You missed your turn.");
         }
 
-        if (skill == 4)
+        if (skill == 4 && mana > 0)
         {
             SwordDance(enemy);
             Console.WriteLine("You used Sword Dance against the enemy!");
+        }else if(mana <= 0){
+            Console.WriteLine("Not enough mana! You missed your turn.");
         }
 
-        if (skill == 5)
+        if (skill == 5 && mana > 0)
         {
             Ultimate(enemy);
             Console.WriteLine("You used your ultimate!");
+        }else if(mana <= 0){
+            Console.WriteLine("Not enough mana! You missed your turn.");
         }
 
     }
