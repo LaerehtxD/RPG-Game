@@ -10,6 +10,13 @@ class TurnBasedBattle
             Environment.Exit(0);
         }
     }
+        public static void ShowStats(Character char1, Character char2)
+    {
+        char1.ShowCurrentStats();
+        Console.WriteLine();
+        char2.ShowCurrentStats();
+        Console.WriteLine();
+    }
 
     public static void EnemyFight(Mc mC , Enemy1 enemy)
     {
@@ -17,7 +24,8 @@ class TurnBasedBattle
 
 
         while (enemy.health > 0 || mC.health > 0)
-        {
+        {   
+            ShowStats(mC, enemy);
             mC.Fight(game.SkillDecision(), enemy);
             
             if (enemy.health > 0)
@@ -25,10 +33,15 @@ class TurnBasedBattle
                     enemy.enemyFight(enemy.RandomEnemyAttack() , mC);
                     GameOver(mC);
                 }
+            else
+                {
+                    break;
+                }
         }
         Console.WriteLine("ya killed the enemy" );
 
     }
+
 
         public static void Enemy1Fight(Mc mC , Enemy enemy1)
     {

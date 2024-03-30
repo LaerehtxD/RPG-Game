@@ -26,3 +26,18 @@ C:\Users\itorm\OneDrive\Documents\cc3\game act\WorldOfErebos - Copy\bin\Debug\ne
 C:\Users\itorm\OneDrive\Documents\cc3\game act\WorldOfErebos - Copy\bin\Debug\net8.0\WorldOfErebos.pdb
 C:\Users\itorm\OneDrive\Documents\cc3\game act\WorldOfErebos - Copy\obj\Debug\net8.0\WorldOfErebos.genruntimeconfig.cache
 C:\Users\itorm\OneDrive\Documents\cc3\game act\WorldOfErebos - Copy\obj\Debug\net8.0\ref\WorldOfErebos.dll
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\bin\Debug\net8.0\WorldOfErebos.exe
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\bin\Debug\net8.0\WorldOfErebos.deps.json
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\bin\Debug\net8.0\WorldOfErebos.runtimeconfig.json
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\bin\Debug\net8.0\WorldOfErebos.dll
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\bin\Debug\net8.0\WorldOfErebos.pdb
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.AssemblyInfoInputs.cache
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.AssemblyInfo.cs
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.csproj.CoreCompileInputs.cache
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.sourcelink.json
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.dll
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\refint\WorldOfErebos.dll
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.pdb
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\WorldOfErebos.genruntimeconfig.cache
+C:\Users\itorm\OneDrive\Documents\cc3\game repo\RPG-Game\WorldOfErebosGame\obj\Debug\net8.0\ref\WorldOfErebos.dll

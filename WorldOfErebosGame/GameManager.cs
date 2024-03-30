@@ -12,14 +12,17 @@ class GameManager
        
         while (true) 
         {
+            Enemy1 gobby = new Enemy1("Gobby", 2, 50, 0);
          
             Console.WriteLine("Welcome to The World of Erebos!");
             Console.WriteLine("Create you Character:");
             Console.Write("Character name:");
             string characName = Console.ReadLine();
-            Mc mC = new Mc(characName,100,4,50);
+            Mc mC = new Mc(characName, 4, 100, 50);
             Console.WriteLine("Welcome to the game {0},",mC.name);
             Console.WriteLine("Game Story here");
+
+            TurnBasedBattle.EnemyFight(mC, gobby);
     
             
         }
