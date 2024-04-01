@@ -15,10 +15,9 @@ Console.WriteLine("A hero summoned in a world full of magic comes back to his or
 }
 
     
-    }
-    public static void scene2()
-    {
-     public static void scene2()
+}
+
+   public static void scene2()
 {
     Console.WriteLine("You cautiously wander through the unfamiliar terrain, taking in the sights and sounds of this strange world. As you traverse the landscape, you stumble upon a quaint village nestled amidst the trees.");
     Console.WriteLine("The village appears to be bustling with activity as villagers go about their daily tasks. Intrigued, you approach slowly, hoping to learn more about this new world and its inhabitants.");
