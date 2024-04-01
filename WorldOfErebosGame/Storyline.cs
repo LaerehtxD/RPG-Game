@@ -39,8 +39,6 @@ Console.WriteLine("A hero summoned in a world full of magic comes back to his or
     Console.WriteLine("By the time the dust settles and the last of the demon beasts lies vanquished, the villagers look upon you with newfound respect and admiration. They hail you as a hero, a defender of their home and way of life.");
     Console.WriteLine("In the aftermath of the battle, the villagers gather around you, eager to share more about the human civilization in Erebos and the challenges they face in this tumultuous world.");
 }
-  
-    }
      public static void scene5()
     {
         
