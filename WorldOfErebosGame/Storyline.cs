@@ -40,7 +40,12 @@ Console.WriteLine("A hero summoned in a world full of magic comes back to his or
     Console.WriteLine("In the aftermath of the battle, the villagers gather around you, eager to share more about the human civilization in Erebos and the challenges they face in this tumultuous world.");
 }
      public static void scene5()
-    {
-        
+{
+    Console.WriteLine("With the villagers' trust and gratitude secured, you bid farewell to your newfound friends, your heart heavy with the weight of leaving behind the village that had become your home.");
+    Console.WriteLine("As you set out on your new adventure, you carry with you the memories of the bonds forged in battle and the lessons learned from your time in the village.");
+    Console.WriteLine("With determination burning bright in your eyes, you embark on a journey into the unknown, eager to explore the vast and wondrous world of Erebos.");
+    Console.WriteLine("The road ahead may be fraught with peril and uncertainty, but you face it with courage and conviction, knowing that with each step forward, you grow stronger and closer to uncovering the truth behind your arrival in this mysterious realm.");
+}
+ 
     }
 }
