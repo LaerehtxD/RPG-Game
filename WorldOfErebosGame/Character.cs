@@ -33,7 +33,7 @@ class Mc:Character
 {
     Random rand = new Random();
     public Mc(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
-    public float healValue = 1.2f;
+    public float healValue = 2.2f;
     public float overHeal = 150f;
 
     public int exp;
@@ -72,7 +72,7 @@ class Mc:Character
         {
             health = overHeal;
         }
-        mana += 5;
+        mana += 40;
     }
     public void SwordDash(Enemy enemy)
     {
@@ -103,10 +103,8 @@ class Mc:Character
 
         if (skill == 2 && mana > 0)
         {
-            Console.WriteLine("You recovered your health, health added: " , healValue * health);
+            Console.WriteLine("You recovered your health, health added: {0}" , healValue * health);
             SelfHeal();
-        }else if(mana <= 0){
-            Console.WriteLine("Not enough mana! You missed your turn.");
         }
 
         if (skill == 3 && mana > 0)
@@ -169,13 +167,13 @@ class Enemy1:Enemy{
     }
 
 
-    public void enemyFight(int randomSkill, Mc mC)
+    public void enemyFight1(int randomSkill, Mc mC)
     {
 
         if (randomSkill == 1)
         {
             Charge(mC);
-            Console.WriteLine("Enemy blah blah blah");
+            Console.WriteLine("Enemy charged at you!!!");
 
         }
         if (randomSkill == 2)
@@ -203,22 +201,180 @@ class Enemy1:Enemy{
 }
 class Enemy2:Enemy{
     public Enemy2(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
+    Random rand = new Random();
+    public void Steal(Mc mc)
+    {
+        mc.health -= attackPower * 2;
+    }
+    public void Curse(Mc mc)
+    {
+        mc.attackPower /= 2;
+        mc.health /= 3;
+    }
 
+
+    public void enemyFight2(int randomSkill, Mc mC)
+    {
+
+        if (randomSkill == 1)
+        {
+            Charge(mC);
+            Console.WriteLine("Enemy charged at you!!!");
+
+        }
+        if (randomSkill == 2)
+        {
+            Heal();
+            Console.WriteLine("Enemy healed!");
+
+        }
+
+        if (randomSkill == 3)
+        {
+            Steal(mC);
+            Console.WriteLine("The bandit used Steal!");
+
+        }
+        if (randomSkill == 4)
+        {
+            Curse(mC);
+            Console.WriteLine("The bandit cursed you, you received a debuff!");
+
+        }
+    }
 
 }
 class Enemy3:Enemy{
     public Enemy3(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
+    Random rand = new Random();
+    public void Slam(Mc mc)
+    {
+        mc.health -= attackPower * 4;
+    }
+    public void Protection()
+    {
+        health = 150;
+    }
 
+
+    public void enemyFight3(int randomSkill, Mc mC)
+    {
+
+        if (randomSkill == 1)
+        {
+            Charge(mC);
+            Console.WriteLine("Enemy charged at you!!!");
+
+        }
+        if (randomSkill == 2)
+        {
+            Heal();
+            Console.WriteLine("Enemy healed!");
+
+        }
+
+        if (randomSkill == 3)
+        {
+            Slam(mC);
+            Console.WriteLine("The orc slammed the ground and damaged you!");
+
+        }
+        if (randomSkill == 4)
+        {
+            Protection();
+            Console.WriteLine("The orc restored its full health!");// this is probably op lolol
+
+        }
+    }
 
 }
 class Enemy4:Enemy{
     public Enemy4(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
+    Random rand = new Random();
+    public void ThrowRock(Mc mc)
+    {
+        mc.health -= 50;
+    }
+    public void SummonLightning(Mc mc)
+    {
+        mc.health -= rand.Next(20,69);
+    }
 
+
+    public void enemyFight4(int randomSkill, Mc mC)
+    {
+
+        if (randomSkill == 1)
+        {
+            Charge(mC);
+            Console.WriteLine("Enemy charged at you!!!");
+
+        }
+        if (randomSkill == 2)
+        {
+            Heal();
+            Console.WriteLine("Enemy healed!");
+
+        }
+
+        if (randomSkill == 3)
+        {
+            ThrowRock(mC);
+            Console.WriteLine("The orc threw a giant rock at you!");
+
+        }
+        if (randomSkill == 4)
+        {
+            SummonLightning(mC);
+            Console.WriteLine("The orc summoned a lightning and hit you!");
+
+        }
+    }
 
 }
 class Enemy5:Enemy{
     public Enemy5(string Name, float AttackPower, float Health, float Mana): base(Name ,AttackPower, Health, Mana){}
+    Random rand = new Random();
+    public void FireBreath(Mc mc)
+    {
+        mc.health -= attackPower * 8;
+    }
+    public void Overdrive()
+    {
+        health += rand.Next(50,200);
+        attackPower += rand.Next(5,10);
+    }
 
+
+    public void enemyFight5(int randomSkill, Mc mC)
+    {
+
+        if (randomSkill == 1)
+        {
+            Charge(mC);
+            Console.WriteLine("Enemy charged at you!!!");
+
+        }
+        if (randomSkill == 2)
+        {
+            Heal();
+            Console.WriteLine("Enemy healed!");
+
+        }
+
+        if (randomSkill == 3)
+        {
+            FireBreath(mC);
+            Console.WriteLine("The dragon used fire breathe on you!");
+
+        }
+        if (randomSkill == 4)
+        {
+            Overdrive();
+            Console.WriteLine("The dragon used overdrive which enhances its abilities!");
+
+        }
+    }
 
 }
 

@@ -13,18 +13,63 @@ class GameManager
         while (true) 
         {
             Enemy1 gobby = new Enemy1("Gobby", 2, 50, 0);
+            Enemy2 ibrahim = new Enemy2("Ibrahim", 4, 100, 0);
+            Enemy3 gibby = new Enemy3("Gibby", 5, 150, 0);
+            Enemy4 omega = new Enemy4("Omega", 4, 500, 0);
+            Enemy5 crimson = new Enemy5("Crimson", 9, 1000, 0);
          
             Console.WriteLine("Welcome to The World of Erebos!");
             Console.WriteLine("Create you Character:");
             Console.Write("Character name:");
+
             string characName = Console.ReadLine();
-            Mc mC = new Mc(characName, 4, 100, 50);
+
+            Mc mC = new Mc(characName, 6, 100, 150);
+
             Console.WriteLine("Welcome to the game {0},",mC.name);
             Console.WriteLine("Game Story here");
 
+            Console .WriteLine("");
+            Console .WriteLine("**************************************");
+            Console .WriteLine("");
+
+            Console.WriteLine("Fight Goblin");
             TurnBasedBattle.EnemyFight(mC, gobby);
-    
+
+            Console .WriteLine("");
+            Console .WriteLine("**************************************");
+            Console .WriteLine("");
+
+            Console.WriteLine("Fight bandit");
+            TurnBasedBattle.Enemy2Fight(mC, ibrahim);
+
+            Console .WriteLine("");
+            Console .WriteLine("**************************************");
+            Console .WriteLine("");
+
+            Console.WriteLine("Fight orc");
+            TurnBasedBattle.Enemy3Fight(mC, gibby);
+
+            Console .WriteLine("");
+            Console .WriteLine("**************************************");
+            Console .WriteLine("");
+
+            Console.WriteLine("Fight golem");
+            TurnBasedBattle.Enemy4Fight(mC, omega);
+
+            Console .WriteLine("");
+            Console .WriteLine("**************************************");
+            Console .WriteLine("");
             
+            Console.WriteLine("Fight dragon");
+            TurnBasedBattle.Enemy5Fight(mC, crimson);
+
+
+            //first enemy goblin
+            //second enemy bandit
+            //third enemy orc
+            //fourth enemy golem
+            //fifth enemy dragon
         }
     }
 
