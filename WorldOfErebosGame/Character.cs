@@ -58,6 +58,9 @@ class Mc:Character
         attackPower += 2;
         mana += 20;
         overHeal += 150;
+        Console.WriteLine("You leveled up!!");
+        Console.WriteLine("Here are your new stats: ");
+        ShowCurrentStats();
 
     }
     public void BasicAttack(Enemy enemy)
@@ -101,7 +104,7 @@ class Mc:Character
         }
 
 
-        if (skill == 2 && mana > 0)
+        if (skill == 2)
         {
             Console.WriteLine("You recovered your health, health added: {0}" , healValue * health);
             SelfHeal();

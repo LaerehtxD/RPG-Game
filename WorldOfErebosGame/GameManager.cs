@@ -4,6 +4,7 @@ class GameManager
 {
 
     World location = new World();
+    Storyline story = new Storyline();
     public void StartGame()
     {
         // Initialize game components
@@ -27,7 +28,7 @@ class GameManager
             Mc mC = new Mc(characName, 6, 100, 150);
 
             Console.WriteLine("Welcome to the game {0},",mC.name);
-            Console.WriteLine("Game Story here");
+            story.GameIntroduction();
 
             Console .WriteLine("");
             Console .WriteLine("**************************************");

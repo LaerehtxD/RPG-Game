@@ -49,7 +49,6 @@ class TurnBasedBattle
     {
         GameManager game = new GameManager();
 
-
         while (enemy1.health > 0 || mC.health > 0)
         {   
             ShowStats(mC, enemy1);
