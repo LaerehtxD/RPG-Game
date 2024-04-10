@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-class Character
+abstract class Character
 {
     
     public string name;

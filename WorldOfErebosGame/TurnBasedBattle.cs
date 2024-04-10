@@ -40,7 +40,7 @@ class TurnBasedBattle
                     break;
                 }
         }
-        Console.WriteLine("ya killed the enemy" );
+        Console.WriteLine("You killed the enemy" );
 
     }
 
@@ -64,7 +64,7 @@ class TurnBasedBattle
                     break;
                 }
         }
-        Console.WriteLine("ya killed the enemy" );
+        Console.WriteLine("You killed the enemy" );
 
         
     }
@@ -89,7 +89,7 @@ class TurnBasedBattle
                     break;
                 }
         }
-        Console.WriteLine("ya killed the enemy" );
+        Console.WriteLine("You killed the enemy" );
     }
 
         public static void Enemy3Fight(Mc mC , Enemy3 enemy3)
@@ -112,7 +112,7 @@ class TurnBasedBattle
                     break;
                 }
         }
-        Console.WriteLine("ya killed the enemy" );
+        Console.WriteLine("You killed the enemy" );
     }
 
         public static void Enemy4Fight(Mc mC , Enemy4 enemy4)
@@ -135,7 +135,7 @@ class TurnBasedBattle
                     break;
                 }
         }
-        Console.WriteLine("ya killed the enemy" );
+        Console.WriteLine("You killed the enemy" );
     }
         public static void Enemy5Fight(Mc mC , Enemy5 enemy5)
     {
@@ -157,7 +157,7 @@ class TurnBasedBattle
                     break;
                 }
         }
-        Console.WriteLine("ya killed the enemy" );
+        Console.WriteLine("You killed the enemy" );
     }
 
 }
