@@ -1,14 +1,32 @@
 class TurnBasedBattle
 {
-    
+
     public static void GameOver(Mc mC) 
     {
-        if (mC.health <= 0)
+    if (mC.health <= 0)
+    {
+        Console.WriteLine("GG! Your character has been defeated.");
+        Console.WriteLine("Do you want to play again? (yes/no)");
+        string userInput = Console.ReadLine().ToLower();
+        
+        while (userInput != "yes" && userInput != "no")
         {
-            Console.WriteLine("GG go next...");
-            Console.ReadLine();
+            Console.WriteLine("Invalid input. Please enter 'yes' or 'no'.");
+            userInput = Console.ReadLine().ToLower();
+        }
+
+        if (userInput == "yes")
+        {
+            GameManager gameManager = new GameManager();
+            gameManager.StartGame();
+        }
+        else
+        {
+            Console.WriteLine("Thanks for playing!");
             Environment.Exit(0);
         }
+    }
+
     }
         public static void ShowStats(Character char1, Character char2)
     {
@@ -158,6 +176,8 @@ class TurnBasedBattle
                 }
         }
         Console.WriteLine("You killed the enemy" );
+
+        
     }
 
 }

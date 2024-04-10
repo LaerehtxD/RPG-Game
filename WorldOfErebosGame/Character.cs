@@ -95,46 +95,56 @@ class Mc:Character
         enemy.health -= attackPower* rand.Next(10,15);
         
     }
-    public void Fight(int skill , Enemy enemy)
+ public void Fight(int skill, Enemy enemy)
+{
+    if (skill == 1)
     {
-        if (skill == 1)
-        {
-            BasicAttack(enemy);
-            Console.WriteLine("You hit the enemy!");
-        }
-
-
-        if (skill == 2)
-        {
-            Console.WriteLine("You recovered your health, health added: {0}" , healValue * health);
-            SelfHeal();
-        }
-
-        if (skill == 3 && mana > 0)
+        BasicAttack(enemy);
+        Console.WriteLine("You hit the enemy!");
+    }
+    else if (skill == 2)
+    {
+        Console.WriteLine("You recovered your health, health added: {0}", healValue * health);
+        SelfHeal();
+    }
+    else if (skill == 3)
+    {
+        if (mana > 0)
         {
             SwordDash(enemy);
             Console.WriteLine("You Sword Dashed to the enemy!");
-        }else if(mana <= 0){
+        }
+        else
+        {
             Console.WriteLine("Not enough mana! You missed your turn.");
         }
-
-        if (skill == 4 && mana > 0)
+    }
+    else if (skill == 4)
+    {
+        if (mana > 0)
         {
             SwordDance(enemy);
             Console.WriteLine("You used Sword Dance against the enemy!");
-        }else if(mana <= 0){
+        }
+        else
+        {
             Console.WriteLine("Not enough mana! You missed your turn.");
         }
-
-        if (skill == 5 && mana > 0)
+    }
+    else if (skill == 5)
+    {
+        if (mana > 0)
         {
             Ultimate(enemy);
             Console.WriteLine("You used your ultimate!");
-        }else if(mana <= 0){
+        }
+        else
+        {
             Console.WriteLine("Not enough mana! You missed your turn.");
         }
-
     }
+}
+
 }
 
 class Enemy:Character

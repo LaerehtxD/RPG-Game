@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldOfErebos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d15eb5892424eb53ba74eeb951d62800a29c90ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c7c556ccb3a7eafdff87e8bce5c3c6142cc3679")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldOfErebos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldOfErebos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
